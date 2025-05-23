@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Learning outcomes - Intermediate bash/Linux</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../assets/_markdown_exec_pyodide.css" rel="stylesheet" />
+        <link href="../assets/_markdown_exec_ansi.css" rel="stylesheet" />
+        <link href="../assets/_mkdocstrings.css" rel="stylesheet" />
+        <link href="../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Learning outcomes";
+        var mkdocs_page_input_path = "learning_outcomes.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="..">
+          <img src="../images/bash-script.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Common</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Learning outcomes</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#curriculum__overview">Curriculum overview</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#references">References</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../course_dates/">Course dates</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../schedule/">Schedule</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../prerequisites/">Prerequisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lessons Day 1 (smarter command line)</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../sessions/intro/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../sessions/pipe/">Linux pipe</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../sessions/wc_cut/">Linux tools I (wc, cut)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../sessions/grep.md">Linux tools II (grep)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../sessions/awk_sed/">Linux tools III (awk, sed)</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lessons Day 2 (smarter bash)</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="" href="../sessions/scripting.md">Scripting</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../sessions/redirects/">Redirects</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../sessions/env_vars.md">Environment variables</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../sessions/symlinks.md">Symbolic links</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../sessions/qual/">Quality of life</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../sessions/arch/">Archiving/compressing data</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../summary.md">Summary</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Extras</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="" href="../more_script.md">More scripting</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../books/">Books</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Intermediate bash/Linux</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Common</li>
+      <li class="breadcrumb-item active">Learning outcomes</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/UPPMAX/naiss_intermediate_bash_linux/blob/main/docs/learning_outcomes.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="learning__outcomes">Learning outcomes<a class="headerlink" href="#learning__outcomes" title="Permanent link">&para;</a></h1>
+<!-- markdownlint-disable MD013 -->
+<table>
+<thead>
+<tr>
+<th>Curriculum item</th>
+<th>Learning objective</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bash scripting</td>
+<td>Learners can use bash variables</td>
+</tr>
+<tr>
+<td>Bash scripting</td>
+<td>Learners can use bash <code>if</code> statements</td>
+</tr>
+<tr>
+<td>Bash scripting</td>
+<td>Learners can use bash <code>if</code> statements with the &lsquo;or&rsquo; and &lsquo;and&rsquo; symbols</td>
+</tr>
+<tr>
+<td>Bash scripting</td>
+<td>Learners can use bash <code>for</code> statements</td>
+</tr>
+<tr>
+<td>Bash scripting</td>
+<td>Learners can write scripts that require user input</td>
+</tr>
+<tr>
+<td>Environment variables</td>
+<td>Learners can create, read and write to environment variables (e.g. <code>[Shotts, 2024]</code>, chapter 25, p390)</td>
+</tr>
+<tr>
+<td>Advanced redirect</td>
+<td>Learners can redirect output between the standard, error and log output streams</td>
+</tr>
+<tr>
+<td>Regular expressions</td>
+<td>Learners can use <code>.</code>, <code>*</code>, <code>+</code>, <code>?</code>, <code>[]</code>, <code>[^]</code>, <code>{}</code>, <code>()</code> in regular expressions (19. What are Regular Expressions?, p266-onward)(or any regex course)</td>
+</tr>
+<tr>
+<td>Regular expressions</td>
+<td>Learners can use <code>grep</code> for pattern matching</td>
+</tr>
+<tr>
+<td>Regular expressions</td>
+<td>Learners can use <code>sed</code> for pattern matched replacing</td>
+</tr>
+<tr>
+<td>Links (hard/soft)</td>
+<td>Learners can create soft and hard symbolic links (e.g. <code>[Shotts, 2024]</code>, &lsquo;3. Symbolic Links&rsquo;, p24)</td>
+</tr>
+<tr>
+<td>Archiving/Compressing data</td>
+<td>Learners can compress and extract data, using <code>(g)zip</code> and <code>tar</code></td>
+</tr>
+<tr>
+<td>Linux pipe</td>
+<td><a href="https://github.com/UPPMAX/naiss_intermediate_bash_linux/issues/6">Learners can chain commands using the Linux pipe (6. Pipelines, p63-p64)</a></td>
+</tr>
+<tr>
+<td>Finding information</td>
+<td><a href="https://github.com/UPPMAX/naiss_intermediate_bash_linux/issues/7">Learners have practiced using a book on bash/Linux</a></td>
+</tr>
+<tr>
+<td>Quality of life</td>
+<td>Learners can start a background process with <code>&amp;</code> and terminate it</td>
+</tr>
+<tr>
+<td>Quality of life</td>
+<td>Terminal shortcuts/usage</td>
+</tr>
+<tr>
+<td>Quality of life</td>
+<td>Editing a <code>.bashrc</code></td>
+</tr>
+<tr>
+<td>Quality of life</td>
+<td>Using aliases</td>
+</tr>
+<tr>
+<td>Linux tools</td>
+<td><code>cut</code></td>
+</tr>
+<tr>
+<td>Linux tools</td>
+<td><code>dos2unix</code>, <code>unix2dos</code></td>
+</tr>
+<tr>
+<td>Linux tools</td>
+<td><code>wc</code></td>
+</tr>
+<tr>
+<td>Linux tools</td>
+<td><code>awk</code></td>
+</tr>
+</tbody>
+</table>
+<!-- markdownlint-enable MD013 -->
+
+<h2 id="curriculum__overview">Curriculum overview<a class="headerlink" href="#curriculum__overview" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Bash scripting</li>
+<li>Environment variables</li>
+<li>Advanced redirect</li>
+<li>Regular expressions</li>
+<li>Links (hard/soft)</li>
+<li>Archiving/Compressing data</li>
+<li><a href="https://github.com/UPPMAX/naiss_intermediate_bash_linux/issues/6">Linux pipe</a></li>
+</ul>
+<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
+<ul>
+<li><code>[Shotts, 2024]</code> Shotts, William.
+  The Linux command line: a complete introduction. No Starch Press, 2024.
+  <a href="../books/the_linux_command_line.pdf">PDF</a></li>
+</ul>
+<!-- Tables cannot be split up over lines, hence will break 80 characters per line -->
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href=".." class="btn btn-neutral float-left" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../course_dates/" class="btn btn-neutral float-right" title="Course dates">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/UPPMAX/naiss_intermediate_bash_linux" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href=".." style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../course_dates/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../assets/_markdown_exec_pyodide.js"></script>
+      <script src="../search/main.js"></script>
+      <script src="../js/open_in_new_tab.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

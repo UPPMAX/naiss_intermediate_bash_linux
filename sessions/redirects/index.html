@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Redirects - Intermediate bash/Linux</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../assets/_markdown_exec_pyodide.css" rel="stylesheet" />
+        <link href="../../assets/_markdown_exec_ansi.css" rel="stylesheet" />
+        <link href="../../assets/_mkdocstrings.css" rel="stylesheet" />
+        <link href="../../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Redirects";
+        var mkdocs_page_input_path = "sessions/redirects.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../..">
+          <img src="../../images/bash-script.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Common</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../learning_outcomes/">Learning outcomes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../course_dates/">Course dates</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../schedule/">Schedule</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../prerequisites/">Prerequisites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lessons Day 1 (smarter command line)</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../intro/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pipe/">Linux pipe</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../wc_cut/">Linux tools I (wc, cut)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../grep.md">Linux tools II (grep)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../awk_sed/">Linux tools III (awk, sed)</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lessons Day 2 (smarter bash)</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="" href="../scripting.md">Scripting</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Redirects</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#overwrite__redirction">Overwrite redirction</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#examples">Examples</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#append__redirection">Append redirection</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#examples_1">Examples</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../env_vars.md">Environment variables</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../symlinks.md">Symbolic links</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../qual/">Quality of life</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../arch/">Archiving/compressing data</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../summary.md">Summary</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Extras</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="" href="../../more_script.md">More scripting</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../books/">Books</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Intermediate bash/Linux</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Lessons Day 2 (smarter bash)</li>
+      <li class="breadcrumb-item active">Redirects</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/UPPMAX/naiss_intermediate_bash_linux/blob/main/docs/sessions/redirects.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <!-- markdownlint-disable MD013 -->
+<!-- markdownlint-disable MD009 -->
+<h1 id="redirects">Redirects<a class="headerlink" href="#redirects" title="Permanent link">&para;</a></h1>
+<p>I/O redirection: Usually, standard input comes from the keyboard etc. and the standard output goes to the screen. There is also standard error. All of these can be redirected with Linux commands. </p>
+<div class="admonition note">
+<p class="admonition-title">Objectives</p>
+<ul>
+<li>Learn about redirection<ul>
+<li>standard input</li>
+<li>standard output</li>
+<li>standard error </li>
+</ul>
+</li>
+</ul>
+</div>
+<p>When running a command which can take input, give output, or do both, redirection lets us <em>redirect</em> the input and output to any files or folders we want to. It is also possible to redirect any errors specifically, instead of together with regular output, so you get errors and other output to different files.  </p>
+<p>As default, <strong>standard output</strong> and <strong>standard error</strong> are sent to the screen and <strong>standard input</strong> comes from the keyboard/mouse. </p>
+<p><strong>Example</strong> you run a command, for instance <code>ls</code>; it throws the output to the screen. However, if you want to save it to a file instead you could use <strong>output redirection</strong>. </p>
+<p>Redirects are particularly useful if we are working with large outputs/inputs, multiple outputs/inputs, or wish to save the output for later. </p>
+<p>It may also be that we want to use the output from one command as input for another command - this can be solved with <strong>pipes</strong> as we saw yesterday, but saving the intermittent result to file is also an option. </p>
+<p>There are different types of redirection: </p>
+<ul>
+<li>overwrite redirection</li>
+<li>append redirection </li>
+<li>merge redirection </li>
+</ul>
+<p>Let us look at them one at a time and see some examples. </p>
+<h2 id="overwrite__redirction">Overwrite redirction<a class="headerlink" href="#overwrite__redirction" title="Permanent link">&para;</a></h2>
+<p>Let us assume you want to save the output of a command to a file and that you do not mind that the existing content of that file is overwritten (or you create a new file). In this situation, <strong>overwrite redirection</strong> is useful. </p>
+<ul>
+<li><strong>&gt;</strong> - standard output</li>
+<li><strong>&lt;</strong> - standard input</li>
+</ul>
+<h3 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h3>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Code along! </p>
+</div>
+<p><strong>Output of ls to file mylsoutput.txt</strong>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>$<span class="w"> </span>ls<span class="w"> </span>&gt;<span class="w"> </span>mylsoutput.txt
+</span></code></pre></div></p>
+<p><strong>Anything written after &ldquo;&gt;&rdquo; is written to myfile.txt - end with CTRL-D</strong>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>bbrydsoe@enterprise:~$<span class="w"> </span>cat<span class="w"> </span>&gt;<span class="w"> </span>myfile.txt
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>This<span class="w"> </span>text<span class="w"> </span>will<span class="w"> </span>go<span class="w"> </span>to<span class="w"> </span>the<span class="w"> </span>file<span class="w"> </span>myfile.txt
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>bbrydsoe@enterprise:~$
+</span></code></pre></div></p>
+<p><strong>This gives the input of &ldquo;myfile.txt&rdquo; to cat, which prints the content to screen</strong>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>$<span class="w"> </span>cat<span class="w"> </span>&lt;<span class="w"> </span>myfile.txt
+</span></code></pre></div></p>
+<p><strong>Splitting standard error and standard output - send standard error to file &ldquo;error-log&rdquo;</strong>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>./myprogram<span class="w"> </span><span class="m">2</span>&gt;<span class="w"> </span>error.log
+</span></code></pre></div></p>
+<p><strong>Send both standard output and standard error to file &ldquo;mylog.log&rdquo;</strong> 
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>$<span class="w"> </span>./myprogram<span class="w"> </span>&gt;<span class="w"> </span>mylog.log<span class="w"> </span><span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span>
+</span></code></pre></div></p>
+<h2 id="append__redirection">Append redirection<a class="headerlink" href="#append__redirection" title="Permanent link">&para;</a></h2>
+<p>It is also possible to append to a file with redirection, instead of overwriting. This is done with: </p>
+<ul>
+<li><strong>&gt;&gt;</strong> - standard output</li>
+<li><strong>&lt;&lt;</strong> - standard input </li>
+</ul>
+<h3 id="examples_1">Examples<a class="headerlink" href="#examples_1" title="Permanent link">&para;</a></h3>
+<p><strong>Add more text to an existing file</strong> 
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;text to append_add_here&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>myfile.txt
+</span></code></pre></div></p>
+<p><strong>Another way to add more text to an existing file</strong>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nb">printf</span><span class="w"> </span><span class="s2">&quot;text to append\n&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>myfile.txt
+</span></code></pre></div></p>
+<p><strong>Append one existing file to another</strong>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>cat<span class="w"> </span>file<span class="w"> </span>&gt;&gt;<span class="w"> </span>file2
+</span></code></pre></div></p>
+<!-- Let's break the 80 characters per line --><!-- Let's stop checking for trailing spaces -->
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../awk_sed/" class="btn btn-neutral float-left" title="Linux tools III (awk, sed)"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../qual/" class="btn btn-neutral float-right" title="Quality of life">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/UPPMAX/naiss_intermediate_bash_linux" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../awk_sed/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../qual/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../assets/_markdown_exec_pyodide.js"></script>
+      <script src="../../search/main.js"></script>
+      <script src="../../js/open_in_new_tab.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
